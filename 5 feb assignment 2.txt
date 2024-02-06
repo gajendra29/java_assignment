@@ -313,6 +313,30 @@ public class Main{
 -------------------------------
 
 9)three number max used only if else 
+
+Ans)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the secont number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the third number ");
+        int c = sc.nextInt();
+        if(a>b && a>c){
+            System.out.println("A is grater");
+        }
+        else if(b>a && b>c){
+            System.out.println("B is grater");
+        }
+        else if(c>a && c>b){
+            System.out.println("C is grater");
+        }
+    }
+}
 -----------------------------------------------
 
 ----------------------------------------------------
@@ -331,11 +355,50 @@ bank details:
 salary : 
 alot :
  holidays 
+
+Ans)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name ");
+        String sname = sc.nextLine();
+        System.out.println("Enter the address ");
+        String add = sc.nextLine();
+        System.out.println("Enter the bank deatil ");
+        String bdestail = sc.nextLine();
+        System.out.println("Enter the Salary");
+        float sal = sc.nextFloat();
+        System.out.println("Enter the holidays");
+        int holi = sc.nextInt();
+        if(holi==1){
+            float alot = sal;
+            System.out.println("Aloted salary is "+alot);
+        }
+        else if(holi>=2 && holi<5){
+            float alot = sal-(sal/100)*5;
+            System.out.println("Aloted salary is "+alot);
+        }
+        else if(holi>=5 && holi<14){
+            float alot = sal-(sal/100)*10;
+            System.out.println("Aloted salary is "+alot);
+        }
+        else if(holi==15){
+            float alot = sal-(sal/100)*15;
+            System.out.println("Aloted salary is "+alot);
+        }
+        else if(holi<15){
+            System.out.println("No salary");
+        }
+    }
+}
+
 -------------------------------------------
 12)
 electric city bill : 
 4 unit 
-40 
+amount 40 
 1- 10 = 10% 
 11-20 =15% 
 21-40 =30% 
@@ -347,6 +410,41 @@ unit :3
 amout 30 
 discout : 10% 
 total pay amount : 
+
+Ans)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name ");
+        String sname = sc.nextLine();
+        System.out.println("Enter the unit ");
+        int unit = sc.nextInt();
+        int amount = unit*10;
+        System.out.println("Amount "+amount);
+        if(amount<=10){
+            float dis = (10/100)*amount;
+            System.out.println("The discount amount is "+dis);
+            System.out.println("Total payable amount is "+ (amount-(10/100)*amount));
+        }
+        else if(amount>=11 && amount<=20){
+            float dis = (15/100)*amount;;
+            System.out.println("The discount amount is "+dis);
+            System.out.println("Total payable amount is "+ (amount-(15/100)*amount));
+        }
+        else if(amount>=21 && amount<=40){
+            float dis = (30/100)*amount;;
+            System.out.println("The discount amount is "+dis);
+            System.out.println("Total payable amount is "+ (amount-(30/100)*amount));
+        }
+        else if(amount==50){
+            float dis = (50/100)*amount;
+            System.out.println("The discount amount is "+dis);
+            System.out.println("Total payable amount is "+ (amount-(50/100)*amount));
+        }
+    }
+}
 ----------------------------------------------------
 13) 
 retailer 
