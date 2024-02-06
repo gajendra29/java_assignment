@@ -177,6 +177,28 @@ public class Main{
 mid 
 low 
 high 
+
+Ans)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the height of the person in m");
+        float height = sc.nextFloat();
+        float h = height*100;
+        if(h>100 && h<150){
+            System.out.println("Low");
+        }
+        else if(h>150 && h<200){
+            System.out.println("Mid");
+        }
+        else if(h>200){
+            System.out.println("High");
+        }
+    }
+}
+
 ----------------------------------------------------
 7)Write a java program to read the roll no, name,fnname and marks of three subjects and calculate the total, percentage and division.
 Test Data :
@@ -190,6 +212,57 @@ Input the marks of Physics, Chemistry and Computer Application : 70 80 90
 total: 
 precentage : % 
 division:
+
+Ans)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the roll number");
+        int rol = sc.nextInt();
+        System.out.println("Enter the name of the student");
+        String name = sc.nextLine();
+        sc.nextLine();
+        System.out.println("Enter the fname");
+        String fname = sc.nextLine();
+        System.out.println("Enter the mname");
+        String mname = sc.nextLine();
+        System.out.println("Enter the address");
+        String add = sc.nextLine();
+        System.out.println("Enter the contant");
+        String cont = sc.nextLine();
+        System.out.println("Enter the marks of physics");
+        int phy = sc.nextInt();
+        System.out.println("Enter the marks of chemistry");
+        int che = sc.nextInt();
+        System.out.println("Enter the marks of computer");
+        int co = sc.nextInt();
+        int total = phy+che+co;
+        int per = (phy+che+co/300)*100;
+        System.out.println("Roll number :"+ rol);
+        System.out.println("student name :"+ name);
+        System.out.println("father name :"+ fname);
+        System.out.println("mather name :"+ mname);
+        System.out.println("address :"+ add);
+        System.out.println("contact :"+ cont);
+        System.out.println("physics :"+ phy);
+        System.out.println("chemistry :"+ che);
+        System.out.println("computer :"+ co);
+        System.out.println("total :"+ total);
+        System.out.println("percentage "+ per);
+        if(per>=60){
+            System.out.println("First division");
+        }
+        else if(per<60 && per>=40){
+            System.out.println("secont devision");
+        }
+        else if(per<40 && per>=33){
+            System.out.println("Third devision");
+        }
+    }
+}
+
 -------------------------------------------
 8) 5 number input 
 >40 
@@ -199,6 +272,44 @@ average
 5. 60 to 80 – B
 6. Above 80 – A 
 otherwise fail 
+
+Ans)
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the secont number ");
+        int b = sc.nextInt();
+        System.out.println("Enter the third number ");
+        int c = sc.nextInt();
+        if(a>40 && b>40 && c>40){
+            int add = a+b+c;
+            int avg = (a+b+c)/3;
+                if(avg>=45 && avg<50){
+                    System.out.println("D");
+                }
+                else if(avg>=50 && avg<60){
+                    System.out.println("C");
+                }
+                else if(avg>=60 && avg<80){
+                    System.out.println("B");
+                }
+                else if(avg>=80){
+                    System.out.println("A");
+                }
+                else{
+                    System.out.println("Fail");
+                }    
+        }
+        else{
+            System.out.println("fail");
+        }
+    }
+}
+
 -------------------------------
 
 9)three number max used only if else 
