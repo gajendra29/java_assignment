@@ -423,28 +423,29 @@ public class Main{
         int unit = sc.nextInt();
         int amount = unit*10;
         System.out.println("Amount "+amount);
-        if(amount<=10){
+        if(unit<=10){
             float dis = (10/100)*amount;
             System.out.println("The discount amount is "+dis);
             System.out.println("Total payable amount is "+ (amount-(10/100)*amount));
         }
-        else if(amount>=11 && amount<=20){
+        else if(unit>=11 && unit<=20){
             float dis = (15/100)*amount;;
             System.out.println("The discount amount is "+dis);
             System.out.println("Total payable amount is "+ (amount-(15/100)*amount));
         }
-        else if(amount>=21 && amount<=40){
+        else if(unit>=21 && unit<=40){
             float dis = (30/100)*amount;;
             System.out.println("The discount amount is "+dis);
             System.out.println("Total payable amount is "+ (amount-(30/100)*amount));
         }
-        else if(amount==50){
+        else if(unit==50){
             float dis = (50/100)*amount;
             System.out.println("The discount amount is "+dis);
             System.out.println("Total payable amount is "+ (amount-(50/100)*amount));
         }
     }
 }
+
 ----------------------------------------------------
 13) 
 retailer 
