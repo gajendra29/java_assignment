@@ -263,7 +263,101 @@ type3 : random value 34--->89 =>odd number
 type4 : randome value k sabi ka sum aa jaye 
 
 Ans)
+    import java.util.*;
 
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a even for even number and odd for odd number ");
+            String e = sc.nextLine();
+            if(e.equals("even")){
+                System.out.println("Enter the type");
+                String ty = sc.nextLine();
+                if(ty.equals("type1")){
+                        for(int i=1; i<=100; i++){
+                            System.out.println(i);
+                        }
+                }
+                else if(ty.equals("type2")){
+                    int sum = 0;
+                    for(int i=1; i<=100; i++){
+                        if(i%2==0){
+                            sum += i;
+                        }
+                    }
+                    System.out.println(sum);
+                }
+                else if(ty.equals("type3")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    for(;a<=b;){
+                        if(a%2==0){
+                            System.out.println("Even number");
+                        }
+                        a++;
+                    }
+                }
+                else if(ty.equals("type4")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    int sum = 0;
+                    for(;a<=b;){
+                        sum += a;
+                        a++;
+                    }
+                    System.out.println(sum);
+                }
+            }
+            else if(e.equals("odd")){
+                System.out.println("Enter the type");
+                String ty = sc.nextLine();
+                if(ty.equals("type1")){
+                        for(int i=1; i<=100; i++){
+                            if(i%2==1){
+                                System.out.println(i);
+                            }
+                        }
+                }
+                else if(ty.equals("type2")){
+                    int sum = 0;
+                    for(int i=1; i<=100; i++){
+                        if(i%2==1){
+                            sum += i;
+                        }
+                    }
+                    System.out.println(sum);
+                }
+                else if(ty.equals("type3")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    for(;a<=b;){
+                        if(a%2==1){
+                            System.out.println("Even number");
+                        }
+                        a++;
+                    }
+                }
+                else if(ty.equals("type4")){
+                    System.out.println("Enter the starting point");
+                    int a = sc.nextInt();
+                    System.out.println("Enter the ending point");
+                    int b = sc.nextInt();
+                    int sum = 0;
+                    for(;a<=b;){
+                        sum += a;
+                        a++;
+                    }
+                    System.out.println(sum);
+                }
+            }
+        }
+    }
 ----------------------------------------------------------------------------------------------
 perfect number : 
 6 
