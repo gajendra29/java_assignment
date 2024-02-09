@@ -36,6 +36,40 @@ public class Mnc {
     }
 }
 
+2nd way)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number for car");
+        int num = sc.nextInt();
+        int count = 0;
+        while(num>0){
+            count++;
+            num = num/10;
+        }
+        if(count==4){
+            int rem;
+            int sum = 0;
+            while(num>0){
+                rem = num%10;
+                sum = sum+rem;
+                num = num/10;
+            }
+            if(sum%3==0 || sum%5==0 || sum%7==0){
+                System.out.println("This is lucky number");
+            }
+            else{
+                System.out.println("This is not lucky number");
+            }
+        }
+        else{
+            System.out.println("Not vaild input");
+        }
+    }
+}
+
 -----------------------------------------------------------------
 
 Q4)
@@ -50,6 +84,32 @@ If any of the condition mentioned above fails, then display “Provide valid inp
 Use a minimum of one for loop and one while loop
 
 Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the starting number ");
+        int a = sc.nextInt();
+        System.out.println("Enter the ending number ");
+        int b = sc.nextInt();
+        for(;a<=b;){
+            int count = 0;
+            for(int i=2; i<a; i++){
+                if(a%i==0){
+                    count++;
+                }
+            }
+            if(count==0){
+                System.out.print(a+" ");
+            }
+            else{
+                count++;
+            }
+            a++;
+        }
+    }
+}
 
 
 5)
