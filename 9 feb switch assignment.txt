@@ -1,0 +1,290 @@
+switch paractice questions : 
+************************************
+user input 
+constant 
+************************************
+1)write a program to read a week day number and print weekday name using switch 
+eg 1 =>sunday 
+1 sunday 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to print days ");
+        int a = sc.nextInt();
+        switch (a) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+        
+            case 2:
+                System.out.println("Monday");
+                break;
+        
+            case 3:
+                System.out.println("Tuesday");
+                break;
+        
+            case 4:
+                System.out.println("Wednesday");
+                break;
+        
+            case 5:
+                System.out.println("Thursday");
+                break;
+        
+            case 6:
+                System.out.println("Friday");
+                break;
+        
+            case 7:
+                System.out.println("Saturday");
+                break;
+        
+            default:
+                System.out.println("Not match");
+                break;
+        }
+    }
+}
+
+-----------------------------------------------------------------------
+2) 
+write a program to read gender (M/F) and print the corresponding gender using a switch statement 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to print days ");
+        char gen = sc.next().charAt(0);
+        switch (gen) {
+            case 'm':
+                System.out.println("Male");
+                break;
+        
+            case 'f':
+                System.out.println("Female");
+                break;
+        
+            default:
+            System.out.println("Other");
+                break;
+        }
+    }
+}
+
+--------------------------------------------------------------------------
+3)
+write a program to check whether the number is even or odd 
+type1: 1 even number 
+2 :odd number 
+
+type2: e =>even number 
+o=>odd number 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number one for even and two for odd ");
+        int a = sc.nextInt();
+        switch (a) {
+            case 1:{
+                System.out.println("Enter the number ");
+                int num = sc.nextInt();
+                String even = (num%2==0)?"even":"Not even";
+                System.out.println(even);
+                break;
+            }
+            case 2:{
+                System.out.println("Enter the number ");
+                int num1 = sc.nextInt();
+                String odd = (num1%2==1)?"odd":"Not odd";
+                System.out.println(odd);
+                break;
+            }
+            default:
+                System.out.println("Not valid");
+                break;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------
+4) 
+write a program to create a simple calculator 
+a b + 
+a+b 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number one for even and two for odd ");
+        char a = sc.next().charAt(0);
+        switch (a) {
+            case '+':{
+                System.out.println("Enter the num ");
+                int num = sc.nextInt();
+                System.out.println("Enter the num1 ");
+                int num1 = sc.nextInt();
+                System.out.println("The addition is "+(num+num1));
+                break;
+            }
+            case '-':{
+                System.out.println("Enter the num ");
+                int num = sc.nextInt();
+                System.out.println("Enter the num1 ");
+                int num1 = sc.nextInt();
+                System.out.println("The addition is "+(num-num1));
+                break;
+            }
+            case '*':{
+                System.out.println("Enter the num ");
+                int num = sc.nextInt();
+                System.out.println("Enter the num1 ");
+                int num1 = sc.nextInt();
+                System.out.println("The addition is "+(num*num1));
+                break;
+            }
+            case '/':{
+                System.out.println("Enter the num ");
+                int num = sc.nextInt();
+                System.out.println("Enter the num1 ");
+                int num1 = sc.nextInt();
+                System.out.println("The addition is "+(num/num1));
+                break;
+            }
+            default:
+                System.out.println("Not valid");
+                break;
+        }
+    }
+}
+
+-----------------------------------------------------------------------------
+5) 
+write a program to check whether a person is eligible or not for vote 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the character v to check the voter eligiblity ");
+        char a = sc.next().charAt(0);
+        switch (a) {
+            case 'v':{
+                System.out.println("Enter the num ");
+                int num = sc.nextInt();
+                String vote = (num>=18)?"valid":"Not valid";
+                System.out.println(vote);
+                break;
+            }
+            default:
+                System.out.println("Not valid");
+                break;
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------
+6)
+write a program to check month ? 
+12 month 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number b/w 1 to 12 ");
+        int a = sc.nextInt();
+        switch (a) {
+            case 1:
+                System.out.println("january");
+                break;
+        
+            case 2:
+                System.out.println("Februry");
+                break;
+        
+            case 3:
+                System.out.println("March");
+                break;
+        
+            case 4:
+                System.out.println("April");
+                break;
+        
+            case 5:
+                System.out.println("May");
+                break;
+        
+            case 6:
+                System.out.println("June");
+                break;
+        
+            case 7:
+                System.out.println("July");
+                break;
+        
+            case 8:
+                System.out.println("Augest");
+                break;
+        
+            case 9:
+                System.out.println("September");
+                break;
+        
+            case 10:
+                System.out.println("October");
+                break;
+        
+            case 11:
+                System.out.println("November");
+                break;
+        
+            case 12:
+                System.out.println("December");
+                break;
+        
+            default:
+                System.out.println("Not a valid month");
+                break;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------
+7)
+a p e o f r l 
+a=armstrong number 
+p =prime number 
+e =even 
+o =odd 
+f =factorial 
+r =reverse 
+l =fibonacci 
+t =perfect number 
+n =neon number 
+w =leap year 
+s =swap one way 
+v =vowel and consonant 
+---------------------------------------------------------------------------------------------------------
+8)
+1 -->10 cases 
+as u wish patterns 
+----------------------------------------------------------------------------------------------------------------------------------
