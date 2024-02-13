@@ -1,0 +1,120 @@
+Main class 
+add()
+sub()
+div()
+multi()
+mod() 
+
+main method :access
+user input 
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a+b;
+        System.out.println("The answer is "+c);
+    }
+    void sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a-b;
+        System.out.println("The answer is "+c);
+    }
+    void multi(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("The answer is "+c);
+    }
+    void div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a/b;
+        System.out.println("The answer is "+c);
+    }
+    void mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a ");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b ");
+        int b = sc.nextInt();
+        int c = a%b;
+        System.out.println("The answer is "+c);
+    }
+    public static void main(String[] args) {
+        Mnc k = new Mnc();
+        k.add();
+        k.sub();
+        k.multi();
+        k.div();
+        k.mod();
+    }
+}
+
+-----------------------------------------
+Main 
+
+swap()
+pallindrome()
+neon()
+armstrong()
+perfect()
+revrse()
+sumofdigit()
+count()
+factorial()
+fibonacci()
+vowel()
+gender()
+email passwrod valid abc 123 
+table()
+sumof even number
+sum of odd number
+
+main access 
+
+-----------------------------------------------------
+class A
+swap()
+pallindrome()
+
+
+class B
+sumof even number
+sum of odd number
+
+class C
+email passwrod valid abc 123 
+table()
+
+
+class D
+factorial()
+fibonacci()
+
+class E 
+armstrong()
+perfect()
+
+class Main 
+neon()
+armstrong()
+perfect()
+
+main method access

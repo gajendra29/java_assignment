@@ -190,3 +190,33 @@ public class Mnc {
     }
 }
 
+9)
+Vohra went to a movie with his friends in a Wave theatre and during break time he
+bought pizzas, puffs and cool drinks. Consider the following prices :
+Rs.100/pizza
+Rs.20/puffs
+Rs.10/cooldrink
+Generate a bill for What Vohra has bought.
+
+Ans)
+import java.util.Scanner;
+
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of pizza ");
+        int piz = sc.nextInt();
+        System.out.println("Enter the number of puff ");
+        int puf  = sc.nextInt();
+        System.out.println("Enter the number of cold drink ");
+        int cold = sc.nextInt();
+        int pizrate = 100*piz;
+        int pufrate = 20*puf;
+        int coldrate = 10*cold;
+        System.out.println("No of pizza "+piz);
+        System.out.println("No of puffs "+puf);
+        System.out.println("No of coldrink "+cold);
+        System.out.println("Total price "+ (pizrate+pufrate+coldrate)); 
+        System.out.println("ENJOY THE SHOW!");
+    }
+}
