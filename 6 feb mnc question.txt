@@ -220,3 +220,33 @@ public class Mnc {
         System.out.println("ENJOY THE SHOW!");
     }
 }
+
+-------------------------------------------------------------
+
+10)
+Problem Statement – Write a program to calculate the fuel consumption of your
+truck.The program should ask the user to enter the quantity of diesel to fill up the
+tank and the distance covered till the tank goes dry.Calculate the fuel consumption
+and display it in the format (liters per 100 kilometers).
+Convert the same result to the U.S. style of miles per gallon and display the result. If
+the quantity or distance is zero or negative display ” is an Invalid Input”.
+[Note: The US approach of fuel consumption calculation (distance / fuel) is the
+inverse of the European approach (fuel / distance ). Also note that 1 kilometer is
+0.6214 miles, and 1 liter is 0.2642 gallons.]
+
+Ans)
+import java.util.*;
+
+    public class Main{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the quantity of fuel");
+            float fuel = sc.nextFloat();
+            System.out.println("Enter the distance covered");
+            float dist = sc.nextFloat();
+            double mile = dist*0.6214;
+            double gallen = fuel*0.2642;
+            double fcon = mile/gallen;
+            System.out.println("The fuel consumption is "+fcon);
+        }
+    }

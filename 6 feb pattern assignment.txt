@@ -340,12 +340,43 @@ public class Mnc {
 ***
 
 Ans)
+public class Mnc{
+    public static void main(String[] args) {
+        for(int i=1; i<=3; i++){
+            for(int s=2; s>=i; s--){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 
+------------------------------------------------------------------
 
 13) 
 *** 
  ** 
   * 
+
+Ans)
+public class Mnc{
+    public static void main(String[] args) {
+        for(int i=1; i<=3; i++){
+            for(int s=1; s<=i; s++){
+                System.out.print(" ");
+            }
+            for(int j=3; j>=i; j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+-----------------------------------------------------------
 
 14)
   *
@@ -355,12 +386,65 @@ Ans)
  **
   * 
 
+Ans)
+public class Mnc{
+    public static void main(String[] args) {
+        for(int i=1; i<=3; i++){
+            for(int s=2; s>=i; s--){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=1; i<=3; i++){
+            for(int s=2; s<=i; s++){
+                System.out.print(" ");
+            }
+            for(int j=3; j>=i; j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+------------------------------------------------------------
+
 15)
   *
  **
 ***
  **
   *
+
+Ans)
+public class Mnc{
+    public static void main(String[] args) {
+        for(int i=1; i<=3; i++){
+            for(int s=2; s>=i; s--){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=1; i<=3; i++){
+            for(int s=1; s<=i; s++){
+                System.out.print(" ");
+            }
+            for(int j=2; j>=i; j--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+-----------------------------------------------------------------
+
 16) 
     *   
    * *
@@ -368,11 +452,17 @@ Ans)
  * * * *
 * * * * * 
 
+Ans)
+
+
 17) 
 ###*
 ##**
 #***
 ****
+
+Ans)
+
 
 18) 
 ****
