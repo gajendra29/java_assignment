@@ -841,6 +841,38 @@ Constraints:
 
 a)3<=N<=50
 b)B[i]={{a-z} or {A-Z}}
+
+Ans)
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arry {
+    public static void main(String[] args){
+        char[] array = {'r','g','b','b','b','y','y'};
+        String str = "";
+        for(int i=0; i<array.length; i++){
+            int count = 0;
+            for(int j=0;j<array.length; j++){
+                if(array[i]==array[j]){
+                    count++;
+                }
+                
+            }
+            if(count%2!=0){
+                str += array[i];
+            }
+        }
+        StringBuilder sb = new StringBuilder("");
+        for(int i=0; i<str.length()-1; i++){
+            while(i<str.length()-1 && str.charAt(i)==str.charAt(i+1)){
+                i++;
+            }
+            sb.append(str.charAt(i));
+        }
+        System.out.println(sb.toString());
+    }
+}
+
 ---------------------------------------------------------
 Q16)
 There is a JAR full of candies for sale at a mall counter. JAR has the capacity N, that is JAR can contain maximum N candies when JAR is full. At any point of time. JAR can have M number of Candies where M<=N. Candies are served to the customers. JAR is never remain empty as when last k candies are left. JAR if refilled with new candies in such a way that JAR get full.
@@ -866,6 +898,29 @@ Input Value
 Output Value
 INVALID INPUT NUMBER OF
 CANDIES LEFT : 10
+
+Ans)
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arry {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of candies present in JAR");
+        int n = sc.nextInt();
+        System.out.println("Enter the candies sold");
+        int val = sc.nextInt();
+        if(val>0 && val<n){
+            System.out.println("The Number of candies sold : "+val);
+            System.out.println("The Number of candies available : "+(n-val));
+        }
+        else{
+            System.out.println("Invalid input");
+            System.out.println("The Number of candies available : "+n);
+        }
+    }
+}
+
 -----------------------------------------
 Q17)
 Selection of MPCS exams include a fitness test which is conducted on ground. There will be a batch of 3 trainees, appearing for running test in track for 3 rounds. You need to record their oxygen level after every round. After trainee are finished with all rounds, calculate for each trainee his average oxygen level over the 3 rounds and select one with highest oxygen level as the most fit trainee. If more than one trainee attains the same highest average level, they all need to be selected.
@@ -916,6 +971,49 @@ b)Oxygen value of trainee 2
 c)Oxygen value of trainee 3
 
 Output must be in given format as in above example. For any wrong input final output should display “INVALID INPUT”
+
+Ans)
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arry {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of rows");
+        //this is for number of rows
+        int m = sc.nextInt();
+        System.out.println("Enter the number of columns");
+        //this is for number of columns
+        //please enter n and m same
+        int n = sc.nextInt();
+        System.out.println("Enter the elements now");
+        int arr[][] = new int[m][n];
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(arr[i][j]>1 || arr[i][j]<100){
+                    arr[i][j] = sc.nextInt();
+                }
+            }
+        }
+        System.out.println("Data is entered");
+        int avg=0;
+        int tavg=0;
+        for(int i=0; i<m; i++){
+            int sum = 0;
+            for(int j=0; j<n; j++){
+                sum += arr[i][j];
+            }
+            avg = sum/m;
+            tavg += avg;
+        }
+        if(tavg<70){
+            System.out.println("All the trainees is unfit");
+        }
+        else{
+            System.out.println(tavg/3);
+        }
+    }
+}
 -----------------------------------------------------------------
 Q18)
 Problem Statement
@@ -946,6 +1044,42 @@ Example 1:
 10.00
 Total estimated Cost : 1847.4 INR
 Note: Follow in input and output format as given in above example
+
+Ans)
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arry {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of internal wall");
+        int inter = sc.nextInt();
+        System.out.println("Enter the number of external wall");
+        int ext = sc.nextInt();
+        if(inter>0 && ext>0){
+            int costi = 18;
+            int coste = 12;
+            System.out.println("Enter the lenght of inner wall");
+            int lwall = sc.nextInt();
+            System.out.println("Enter the width of inner wall");
+            int wwall = sc.nextInt();
+            int area = (lwall*wwall)*costi;
+            int incost = area*inter;
+            // System.out.println("The total cost of inner wall is : "+incost);
+            System.out.println("Enter the lenght of external wall");
+            int elwall = sc.nextInt();
+            System.out.println("Enter the width of external wall");
+            int ewwall = sc.nextInt();
+            int earea = (elwall*ewwall)*coste;
+            int excost = earea*inter;
+            // System.out.println("The total cost of external wall is : "+excost);
+            System.out.println("The total is : "+(incost+excost));
+        }
+        else{
+            System.out.println("User do not want to print the wall");
+        }
+    }
+}
 ------------------------------------------
 Q19)
 Problem Statement
