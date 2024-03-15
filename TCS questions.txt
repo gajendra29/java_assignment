@@ -1128,6 +1128,23 @@ Step 3:
 a)We divide the year by 400
 b)If it is not divisible by 400 then it is a leap year.
 c)If it is divisible by 400 leaving remainder 0 
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    public int leap(int a){
+        String name = (a%4==0 && a%100!=0 || a%400==0)?"Leap year":"Not a leap year";
+        return 0;
+    }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the year to check : ");
+       int a = sc.nextInt();
+       Mnc k = new Mnc();
+       System.out.println(k.leap(a));
+    }
+}
+
 -----------------------------------------------------------------
 Q21)
 Ques. Write a code to check whether no is prime or not. Condition use function check() to find whether entered no is positive or negative ,if negative then enter the no, And if yes pas no as a parameter to prime() and check whether no is prime or not?

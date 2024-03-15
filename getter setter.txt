@@ -1,0 +1,128 @@
+###########################################################
+instance variable :
+-------------------------------------------------------------
+Main class :parameterised : : two number addition 
+user input 
+
+Ans)
+import java.util.Scanner;
+public class Mnc {
+    int a;
+    int b;
+    Mnc(int a, int b){
+        this.a=a;
+        this.b=b;
+        System.out.println(a+b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        new Mnc(a, b);
+    }
+}
+
+---------------------------------------------------------
+Main class :parameterised : : two number sub 
+user input
+---------------------------------------------------------
+ Main class :parameterised : : two number multi
+show() :divide 
+show1() :modular  
+user input
+---------------------------------------------------------
+class A 
+A class :parameterised : : two number addition 
+show() :divide 
+user input 
+
+Main class :parameterised : : two number sub 
+user input
+---------------------------------------------------------
+class A 
+A class :parameterised : : two number addition 
+show() :divide 
+user input 
+
+class B
+B class :parameterised : : two number addition 
+show1() :mul 
+user input 
+
+
+Main class :parameterised : : two number sub 
+show2() :add  
+
+user input
+main()
+A 
+B
+Main access 
+--------------------------------------------------
+##################################################################
+getter setter :
+##############################################################
+Main class : : : two number addition 
+user input 
+---------------------------------------------------------
+Main class : : : two number sub 
+user input
+---------------------------------------------------------
+ Main class : : : two number multi
+show() :divide 
+show1() :modular  
+user input
+---------------------------------------------------------
+class A 
+A class : : : two number addition 
+show() :divide 
+user input 
+
+Main class : : : two number sub 
+user input
+---------------------------------------------------------
+class A 
+A class : : : two number addition 
+show() :divide 
+user input 
+
+class B
+B class : : : two number addition 
+show1() :mul 
+user input 
+
+
+Main class : : : two number sub 
+show2() :add  
+
+user input
+main()
+A 
+B
+Main access 
+---------------------------------------------------------------
+anonymous block
+static block 
+consructor block
+---------------------------------------------------------
+anonymous block
+consructor block
+static block 
+---------------------------------------------------------
+static block 
+consructor block
+anonymous block
+---------------------------------------------------------
+
+1)why jvm read main method firstly ? 
+
+2)why main method is static in java ? 
+
+3)can we execute a java program without static keyword ?
+
+
+4)can we execute a java program without main method ?
+
+5)can we execute a java program without class name ?
