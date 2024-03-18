@@ -943,6 +943,48 @@ show6() : return and argument :four number multiplication
 Main class 
 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    void show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        System.out.println(a/b);
+    }
+}
+class B extends A{
+    void show1(int a,int b){
+        System.out.println(a%b);
+    }
+}
+class C extends B{
+    int show3(int a,int b,int c,int d){
+        int f = a+b+c+d;
+        return f;
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int c = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int d = sc.nextInt();
+        C k = new C();
+        k.show1();
+        k.show1(a, b);
+        k.show3(a, b, c, d);
+    }
+}
+
 ----------------------------------------------------------------------
 class A
 addition :getter setter
@@ -958,6 +1000,59 @@ div :getter setter
 Main class 
 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void setA1(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA1() {
+        return a+b;
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void setA2(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA2() {
+        return a-b;
+    }
+}
+class C extends B{
+    int a;
+    int b;
+    void setA(int a,int b) {
+        this.a = a;
+        this.b = b;
+    }
+    int getA() {
+        return a/b;
+    }
+}
+public class Mnc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        C k = new C();
+        k.setA(a, b);
+        System.out.println(k.getA());
+        k.setA1(a, b);
+        System.out.println(k.getA1());
+        k.setA2(a, b);
+        System.out.println(k.getA2());
+    }
+}
+
 ----------------------------------------------------------------------
 class A
 covairant return type method
@@ -976,6 +1071,55 @@ covairant return type method
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    A first(){
+        System.out.println("A coveriant class");
+        return this;
+    }
+}
+class B extends A{
+    B second(){
+        System.out.println("B coveriant class");
+        return this;
+    }
+}
+class C extends B{
+    C third(){
+        System.out.println("C coveriant class");
+        return this;
+    }
+}
+class D extends C{
+    D fourth(){
+        System.out.println("D coveriant class");
+        return this;
+    }
+}
+class E extends D{
+    E five(){
+        System.out.println("E coveriant class");
+        return this;
+    }
+}
+public class Mnc extends E{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.first();
+        k.second();
+        k.third();
+        k.fourth();
+        k.five();
+    }
+}
+
 ----------------------------------------------------------------------
 class A
 protected instance variable :value deni hey through this 
@@ -994,6 +1138,57 @@ instance variable :
 
 child C class 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    int a;
+    int b;
+    void show3(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    int a;
+    int b;
+    void show4(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 ----------------------------------------------------------------------
 class A
 protected instance variable :value deni hey through this 
@@ -1012,6 +1207,53 @@ instance variable :
 
 child Main class 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    int a;
+    int b;
+    void show4(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 ----------------------------------------------------------------------
 class A
 private instance variable :value deni hey through this 
@@ -1045,6 +1287,54 @@ instance variable :
 
 child C class 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    int a;
+    int b;
+    void show4(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
+
 ----------------------------------------------------------------------
 class A
 default instance variable :value deni hey through this 
@@ -1063,6 +1353,53 @@ instance variable :
 
 child C class 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    default int a;              //error here because you can not make default insatance variable here;
+    default int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    int a;
+    int b;
+    void show2(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    int a;
+    int b;
+    void show4(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 --------------------------------------------------------------
 class A
 show1() :public 
@@ -1075,6 +1412,46 @@ show3()
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    public int a;
+    public int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
+
 --------------------------------------------------------------
 class A
 show1() :private 
@@ -1087,6 +1464,45 @@ show3()
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 --------------------------------------------------------------
 class A
 show1() :protected 
@@ -1100,6 +1516,46 @@ show3()
 class Main 
 multilevel  level child k through access:main()
 
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
+
 --------------------------------------------------------------
 class A
 show1() :default 
@@ -1112,6 +1568,45 @@ show3()
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    default int a;     //error here as you can not declare default instance variable
+    default int b;
+    void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 ------------------------------------------------------------
 class A 
 instance variable : private 
@@ -1125,6 +1620,45 @@ method :public :print :variable
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    private int a;
+    private int b;
+    protected void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    protected void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    public void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 ------------------------------------------------------------
 class A 
 instance variable : protected 
@@ -1138,6 +1672,46 @@ method :public :print :variable
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    protected void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    protected void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    public void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
+
 ------------------------------------------------------------
 class A 
 instance variable : protected 
@@ -1151,6 +1725,45 @@ method :public :print :variable
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    protected int a;
+    protected int b;
+    private void show1(int a,int b){
+        this.a = a;
+        this.b = b;
+        System.out.println(a+b);
+    }
+}
+class B extends A{
+    protected void show2(int a,int b){
+        System.out.println(a-b);
+    }
+}
+class C extends B{
+    public void show3(int a,int b){
+        System.out.println(a/b);
+    }
+}
+public class Mnc extends C{
+    void show4(int a,int b){
+        System.out.println(a*b);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        Mnc k = new Mnc();
+        k.show1(a, b);   //error because private method can not be access
+        k.show2(a, b);
+        k.show3(a, b);
+        k.show4(a, b);
+    }
+}
 ------------------------------------------------------------
 class A
 covariant return type :public 
@@ -1163,6 +1776,38 @@ covariant return type :public
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    public A get1(){
+        return this;
+    }
+}
+class B extends A{
+    public B get2(){
+        return this;
+    }
+}
+class C extends B{
+    public C get3(){
+        return this;
+    }
+}
+public class Mnc extends C{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        C k = new C();
+        k.get1();
+        k.get2();
+        k.get3();
+    }
+}
+
 
 ------------------------------------------------------------
 class A
@@ -1176,4 +1821,37 @@ covariant return type :default
 
 class Main 
 multilevel  level child k through access:main()
+
+Ans)
+import java.util.Scanner;
+class A{
+    private A get1(){
+        return this;
+    }
+}
+class B extends A{
+    protected B get2(){
+        return this;
+    }
+}
+class C extends B{
+    default C get3(){
+        return this;
+    }
+}
+public class Mnc extends C{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        C k = new C();
+        k.get1();
+        k.get2();
+        k.get3();
+    }
+}
+
+// it will give an error because of default coverient return type
 ---------------------------------------------------------------------
